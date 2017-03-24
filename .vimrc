@@ -1,5 +1,5 @@
 "-------------------------------------------
-" My Vim config -- Last Update on 28.11.2016
+" My Vim config -- Last Update on 24.03.2017
 "-------------------------------------------
 "
 " Instructions
@@ -27,11 +27,14 @@ set lazyredraw
 set ttyfast
 filetype indent plugin on
 set hidden
-set number
+set relativenumber
+"set mouse=a
 syntax enable
+set undofile
+set undodir=~/.vim/undodir
 set clipboard=unnamed
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 
 "Remaps
@@ -47,7 +50,11 @@ nnoremap E <S-a>
 nnoremap $ <nop>
 nnoremap ^ <nop>
 inoremap <S-Tab> <C-d>
-
+nnoremap <ScrollWheelUp> <C-Y>
+nnoremap <S-ScrollWheelUp> <C-U>
+nnoremap <ScrollWheelDown> <C-E>
+nnoremap <S-ScrollWheelDown> <C-D>
+nnoremap <C-[> <C-t>
 
 "Usability
 
@@ -57,7 +64,6 @@ set nostartofline
 set ruler
 set laststatus=2
 set confirm
-set mouse=a
 
 
 "Indentation (strong tab)
@@ -68,6 +74,12 @@ set expandtab
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
+
+
+"Disable backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
 
 
 "Arrow keys (move text alongside in nmode and move selection in vmode)
