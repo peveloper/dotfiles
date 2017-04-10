@@ -35,6 +35,7 @@ set undodir=~/.vim/undodir
 set clipboard=unnamed
 set background=dark
 colorscheme hybrid
+"set foldmethod=syntax
 
 
 "Remaps
