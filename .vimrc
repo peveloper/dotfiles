@@ -1,5 +1,5 @@
 "-------------------------------------------
-" My Vim config -- Last Update on 24.03.2017
+" My Vim config -- Last Update on 16.05.2017
 "-------------------------------------------
 "
 " Instructions
@@ -10,7 +10,6 @@
         " $ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 "
 " Plugins
-"
         " CtrlP                 https://github.com/kien/ctrlp.vim.git
         " IndentLine            https://github.com/Yggdroot/indentLine
         " NerdTree              https://github.com/scrooloose/nerdtree
@@ -21,27 +20,26 @@
 execute pathogen#infect()
 
 "General Stuff
-
 set nocompatible
 set lazyredraw
 set ttyfast
 filetype indent plugin on
 set hidden
 set relativenumber
-"set mouse=a
 syntax enable
 set undofile
 set undodir=~/.vim/undodir
 set clipboard=unnamed
 set background=dark
 colorscheme hybrid
-"set foldmethod=syntax
+set fillchars+=vert:▌
+set formatoptions+=j
+set rtp+=~/.fzf
 
 
 "Remaps
-
 let mapleader = "\<Space>"
-nnoremap <Leader>f :CtrlP<CR>
+nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wqa<CR>
 nnoremap <Leader>q :q<CR>
@@ -55,10 +53,8 @@ nnoremap <ScrollWheelUp> <C-Y>
 nnoremap <S-ScrollWheelUp> <C-U>
 nnoremap <ScrollWheelDown> <C-E>
 nnoremap <S-ScrollWheelDown> <C-D>
-nnoremap <C-[> <C-t>
 
 "Usability
-
 set backspace=indent,eol,start
 set autoindent
 set nostartofline
@@ -68,7 +64,6 @@ set confirm
 
 
 "Indentation (strong tab)
-
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -84,7 +79,6 @@ set noswapfile
 
 
 "Arrow keys (move text alongside in nmode and move selection in vmode)
-
 nmap <Left> <<
 nmap <Right> >>
 nmap <Up> [e
@@ -93,11 +87,23 @@ vmap <Up> [egv
 vmap <Down> ]egv
 
 
-"NerdTree
+"A more natural split opening (right-below)
+set splitbelow
+set splitright
 
+
+"Better navigation in splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+"NerdTree
 nmap <Leader>d :NERDTreeToggle<CR>
 
 
-"CtrlP ()
-
-set wildignore+=*/build/**
+"Vim Statusline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
