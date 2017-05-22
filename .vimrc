@@ -1,5 +1,5 @@
 "-------------------------------------------
-" My Vim config -- Last Update on 16.05.2017
+" My Vim config -- Last Update on 24.03.2017
 "-------------------------------------------
 "
 " Instructions
@@ -10,11 +10,9 @@
         " $ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 "
 " Plugins
-        " CtrlP                 https://github.com/kien/ctrlp.vim.git
         " IndentLine            https://github.com/Yggdroot/indentLine
         " NerdTree              https://github.com/scrooloose/nerdtree
         " SuperTab              https://github.com/ervandew/supertab
-        " VimColorsSolarized    https://github.com/altercation/vim-colors-solarized
         " Vim Rooter            https://github.com/airblade/vim-rooter
 
 execute pathogen#infect()
@@ -48,11 +46,12 @@ nnoremap B ^
 nnoremap E <S-a>
 nnoremap $ <nop>
 nnoremap ^ <nop>
-inoremap <S-Tab> <C-d>
 nnoremap <ScrollWheelUp> <C-Y>
 nnoremap <S-ScrollWheelUp> <C-U>
 nnoremap <ScrollWheelDown> <C-E>
 nnoremap <S-ScrollWheelDown> <C-D>
+nnoremap <Leader>zz ZZ
+inoremap <S-Tab> <C-d>
 
 "Usability
 set backspace=indent,eol,start
@@ -97,10 +96,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-
-"NerdTree
-nmap <Leader>d :NERDTreeToggle<CR>
 
 
 "Vim Statusline
