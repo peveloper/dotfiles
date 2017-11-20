@@ -28,6 +28,7 @@ syntax enable
 set undofile
 set undodir=~/.vim/undodir
 set clipboard=unnamed
+set t_Co=256 
 set background=dark
 colorscheme hybrid
 set fillchars+=vert:▌
@@ -99,6 +100,6 @@ nnoremap <C-H> <C-W><C-H>
 
 
 "Vim Statusline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
