@@ -1,5 +1,5 @@
 "-------------------------------------------
-" My Vim config -- Last Update on 24.03.2017
+" My Vim config -- Last Update on 08.02.2018
 "-------------------------------------------
 "
 " Instructions
@@ -13,8 +13,9 @@
         " IndentLine            https://github.com/Yggdroot/indentLine
         " NerdTree              https://github.com/scrooloose/nerdtree
         " SuperTab              https://github.com/ervandew/supertab
-        " Vim Rooter            https://github.com/airblade/vim-rooter
+        " Lightline             https://github.com/itchyny/lightline.vim
 
+let &runtimepath.=',/home/peveloper/mycloud/dev/dotfiles/.vim'
 execute pathogen#infect()
 
 "General Stuff
@@ -25,6 +26,7 @@ filetype indent plugin on
 set hidden
 set relativenumber
 syntax enable
+set encoding=utf-8
 set undofile
 set undodir=~/.vim/undodir
 set clipboard=unnamed
@@ -98,8 +100,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
-"Vim Statusline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"Vim Lightline
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
