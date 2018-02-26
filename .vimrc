@@ -35,7 +35,7 @@ set background=dark
 colorscheme hybrid
 set fillchars+=vert:▌
 set formatoptions+=j
-set rtp+=~/.fzf
+set rtp+=~/mycloud/dev/fzf
 
 
 "Remaps
