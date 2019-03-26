@@ -28,14 +28,14 @@ set relativenumber
 syntax enable
 set encoding=utf-8
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/mycloud/dev/dotfiles/.vim/undodir
 set clipboard=unnamed
 set t_Co=256 
 set background=dark
 colorscheme hybrid
 set fillchars+=vert:▌
 set formatoptions+=j
-set rtp+=~/mycloud/dev/fzf
+"set rtp+=~/mycloud/dev/fzf
 
 
 "Remaps
@@ -63,6 +63,7 @@ set nostartofline
 set ruler
 set laststatus=2
 set confirm
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 
 "Indentation (strong tab)
