@@ -1,0 +1,9 @@
+[submodule ".vim/bundle/vimtex"]
+	path = .vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule ".vim/bundle/lightline.vim"]
+	path = .vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
