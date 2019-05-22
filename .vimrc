@@ -26,6 +26,8 @@ set hidden
 set relativenumber
 syntax enable
 set encoding=utf-8
+set ignorecase
+set smartcase
 set undofile
 set undodir=~/mycloud/dev/dotfiles/.vim/undodir
 set clipboard=unnamed
