@@ -1,4 +1,4 @@
-"-------------------------------------------
+" -------------------------------------------
 " My Vim config -- Last Update on 22.05.2019
 "-------------------------------------------
 "
@@ -38,7 +38,7 @@ set fillchars+=vert:▌
 set formatoptions+=j
 
 "Remaps
-let mapleader = "\<Space>"
+let mapleader=","
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wqa<CR>
 nnoremap <Leader>q :q<CR>
@@ -49,10 +49,6 @@ nnoremap B ^
 nnoremap E <S-a>
 nnoremap $ <nop>
 nnoremap ^ <nop>
-nnoremap <ScrollWheelUp> <C-Y>
-nnoremap <S-ScrollWheelUp> <C-U>
-nnoremap <ScrollWheelDown> <C-E>
-nnoremap <S-ScrollWheelDown> <C-D>
 nnoremap <Leader>zz ZZ
 inoremap <S-Tab> <C-d>
 
