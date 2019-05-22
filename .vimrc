@@ -43,6 +43,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wqa<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e
+nnoremap <Leader>b :b
 nnoremap Ctrl Alt 
 nnoremap B ^
 nnoremap E <S-a>
