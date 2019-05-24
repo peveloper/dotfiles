@@ -25,6 +25,7 @@ filetype indent plugin on
 set hidden
 set relativenumber
 syntax enable
+set spelllang=en
 set encoding=utf-8
 set ignorecase
 set smartcase
